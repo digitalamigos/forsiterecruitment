@@ -104,57 +104,58 @@
 #ja-jobs-widget>br {
     display: none;
 }
-.ja-job-search {
+#ja-jobs-widget .ja-job-search {
     @extend .pt-3;
     @extend .section; 
     @extend .container;
 }
-.ja-form,
-.ja-job-list {
+#ja-jobs-widget .ja-job-list {
     @extend .container;
 }
 //.ja-job-search,
-.ja-job-list-container {
+#ja-jobs-widget .ja-job-list-container {
     @extend .section;
     @extend .bg-white;
 }
-.ja-job-list-container .no-jobs-content{
+#ja-jobs-widget .ja-job-list-container .no-jobs-content{
     @extend .container;
 }
 // .ja-job-search {
 //     @extend .bg-gray;
 // }
-.powered-by-jobadder {
+#ja-jobs-widget .powered-by-jobadder {
     display: none;
 }
 
 /* job list */
-.ja-job-list .job .title {
+#ja-jobs-widget .ja-job-list .job .title {
     @extend .h4;
 
     a {
         color: inherit;
     }
 }
-.ja-job-list .job .view-details {
+#ja-jobs-widget .ja-job-list .job .view-details {
     @extend .btn;
     @extend .btn-primary;
 }
-.ja-job-list .job .date-posted {
+#ja-jobs-widget .ja-job-list .job .date-posted {
     font-weight: bold;
 }
-.ja-job-list .job .classifications {
+#ja-jobs-widget .ja-job-list .job .classifications {
     @extend .list-tertiary;
     margin-bottom: 1.5rem;
 }
 
 /* job form */
-.ja-form .ja-submit {
+#ja-jobs-widget .ja-form .ja-submit {
     text-align: center;
     width: 100%;
     margin-top: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.ja-form .ja-field {
+#ja-jobs-widget .ja-form .ja-field {
     @extend .form-group;
     position: relative;
     display: block;
@@ -168,33 +169,33 @@
         line-height: 1.4;
     }
 }
-.ja-form .ja-submit .ja-button {
+#ja-jobs-widget .ja-form .ja-submit .ja-button {
     @extend .btn;
     @extend .btn-primary;
     @extend .btn-block;
     @extend .btn-lg-inline-block;
 }
-.ja-form {
+#ja-jobs-widget .ja-form {
     @extend .row;
 }
-.ja-form .ja-field-container {
+#ja-jobs-widget .ja-form .ja-field-container {
     @extend .col-lg-6;
 }
-.ja-form .ja-field-container:nth-child(-n+3) {
+#ja-jobs-widget .ja-form .ja-field-container:nth-child(-n+3) {
     @extend .col-lg-4;
 }
 
 /* job details */
-.ja-job-details {
+#ja-jobs-widget .ja-job-details {
     @extend .container;
     @extend .section;
 }
-.ja-job-details .apply {
+#ja-jobs-widget .ja-job-details .apply {
     @extend .d-flex;
     @extend .justify-content-between;
     @extend .align-items-center;
 }
-.ja-button {
+#ja-jobs-widget .ja-button {
     @extend .btn;
     @extend .btn-primary;
 }
