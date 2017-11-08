@@ -163,20 +163,9 @@
     input,
     select {
         @extend .form-control;
-        padding: .875rem 1rem;
+        padding: 0.777777777778rem 1rem;
         height: auto !important;
-    }
-
-    &:before {
-        content: "";
-        height: .277777777778rem;
-        width: 100%;
-        display: block;
-        background-color: #2b2b3e;
-        position: absolute;
-        bottom: 0;
-        -webkit-transform: translate3d(-100%,0,0);
-        transform: translate3d(-100%,0,0);
+        line-height: 1.4;
     }
 }
 .ja-form .ja-submit .ja-button {
