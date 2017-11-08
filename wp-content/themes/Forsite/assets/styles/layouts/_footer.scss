@@ -1,0 +1,82 @@
+/**
+ * Footer
+ *
+ */
+
+.site-footer {
+    padding-top: 2rem;
+    background: $brand-quaternary;
+    border-bottom: 0.625rem solid $brand-primary; /* 10/16 */
+    
+    @include media-breakpoint-up(lg) {
+        padding-top: 1rem;
+        padding-bottom: 1.65rem;
+    }
+}
+
+// 
+// footer links
+//
+.footer-nav {
+    .nav-link {
+        font-size: 1rem;
+        color: $white;
+        display: inline-block;
+
+        &:hover,
+        &:focus {
+            color: $brand-primary;
+            text-decoration: none;
+        }
+        @include media-breakpoint-down(md) {
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+        }
+        @include media-breakpoint-up(lg) {
+            padding: 0 1rem;
+            border-right: 1px solid #fff;
+            line-height: 1;
+
+            &.forsite-partner-logo{
+                border-right: 0;
+            }
+        } 
+    }
+}
+
+// 
+// footer social
+//
+.footer-social {
+    a {
+        color: $white;
+        font-size: 2rem;
+    }
+}
+
+// 
+// footer logo
+//
+.footer-logo {
+    @include media-breakpoint-down(md) {
+        width: 6.84615384615rem; /* 178/26 */
+    }
+}
+
+
+// 
+// Back to top
+//
+
+#back-to-top {
+  position: fixed;
+  bottom: -40px;
+  opacity: 0;
+  right: 20px;
+  transition: all 1s ease;
+  z-index: 500;
+}
+#back-to-top.show {
+  bottom: 20px;
+  opacity: 1;
+}

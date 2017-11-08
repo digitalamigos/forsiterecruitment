@@ -1,0 +1,55 @@
+/**
+ * Buttons
+ *
+ */
+
+.btn {
+    border-radius: 0.333333333333rem; /* 6/18 */
+    border-width: 2px;
+    min-width: 10rem;
+
+    &,
+    &:focus,
+    &:hover {
+        box-shadow: none;
+    }
+    
+    @include media-breakpoint-down(md) {
+       padding: 0.666666666667rem 2rem; /* 12/18 */ /* 36/18 */
+    }
+} 
+.btn-large {
+    font-size: 1.44444444444rem; /* 26/18 */
+    padding: 0.666666666667rem 2rem; /* 12/18 */ /* 36/18 */
+}
+.btn-wide {
+    min-width: 12.2222222222rem; /* 220/18 */
+}
+.btn-lg-inline-block {
+    @include media-breakpoint-up(lg) {
+        display: inline-block !important;
+        width: auto !important;
+    }
+} 
+
+
+.btn-outline-white {
+    &:hover,
+    &:focus {
+        color: $brand-primary;
+        border-color: $brand-primary;
+    }
+}
+
+/* navbar */
+.btn-topbar {
+    font-size: 1.22222222222rem; /* 22/18 */
+    border-radius: 0;
+    padding: 0.333333333333rem 1.33333333333rem; /* 6/18 */ /* 24/18 */
+    height: $topbar-height;
+
+    &:hover,
+    &:focus {
+        box-shadow: none;
+    }
+}

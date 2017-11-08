@@ -1,0 +1,46 @@
+/**
+ * Transitions
+ *
+ */
+
+a, 
+.btn,
+button,
+input, 
+textarea {
+    transition: background-color .2s ease-out, 
+                background-image .2s ease-out, 
+                border-color .2s ease-out, 
+                box-shadow .2s ease-out, 
+                color .2s ease-out, 
+                opacity .2s ease-out, 
+                text-shadow .2s ease-out;
+}
+
+.input-wrapper:before {
+    transition: transform .5s; 
+}
+.navmenu,
+.navportal,
+.values-item__top {
+    transition: opacity .2s ease-out, 
+                visibility .2s;
+}
+.navbar-search { 
+    transition: opacity .2s ease-out, 
+                visibility .2s ease-out, 
+                transform .2s ease-out;
+}
+
+
+@keyframes preloader {
+    0% {
+        transform: translate3d(-100%, 0, 0)
+    }
+    50% {
+        transform: translate3d(0, 0, 0)
+    }
+    100% {
+        transform: translate3d(100%, 0, 0)
+    }
+}

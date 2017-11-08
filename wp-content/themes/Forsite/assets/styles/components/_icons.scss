@@ -1,0 +1,35 @@
+/**
+ * Icons
+ *
+ */
+
+.footer__scroll-to-top,
+.hero__next-section {
+    display: block;
+
+    .fa:before {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        color: $brand-primary;
+        opacity: .5;
+        display: block;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid $brand-primary;
+    }
+}
+.hero__next-section {    
+    position: absolute;
+    bottom: 1rem;
+    z-index: 2;    
+    left: 50%;
+    margin-left: -1rem;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+.footer__scroll-to-top {
+    .fa:before {
+        line-height: 1.5rem;
+    }
+}

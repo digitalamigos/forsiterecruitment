@@ -1,0 +1,25 @@
+/**
+ * Posts
+ *
+ */
+
+ //
+// Post Header
+//
+.single-header {
+    @extend .page-header;
+}
+
+//
+// Post Title
+//
+.single-title {
+    @extend .page-title;
+}
+
+//
+// Post Content
+//
+.single-content {
+    @extend .page-content;
+}

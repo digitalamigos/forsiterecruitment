@@ -1,0 +1,40 @@
+/**
+ * Cards
+ *
+ */
+
+//
+// brand cards
+//
+.brand-card {
+    position: relative;
+}
+.brand-card__title,
+.brand-card__subtitle {
+    //margin-bottom: .5em;
+    margin-bottom: 0.3125em; /* 5/16 */
+}
+.brand-card__img {
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+    }
+}
+.brand-card__content {
+    @include media-breakpoint-up(lg) {
+        padding: 15px; 
+        margin-left: -5rem;
+
+        .brand-card_right & {            
+            margin-right: -5rem;
+            text-align: right;
+        }
+    }
+}
+.brand-card__text {
+    margin-bottom: 1.5rem;
+}
+.brand-card__contact {
+    font-weight: 500;
+}

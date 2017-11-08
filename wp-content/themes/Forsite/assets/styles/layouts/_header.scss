@@ -1,0 +1,26 @@
+/**
+ * Header
+ *
+ */
+
+// 
+// top bar 
+//
+.topbar {
+    position: relative;
+    z-index: 1050;
+    background: $white;
+    height: $topbar-height;
+}
+
+.top-bar__logo {    
+    padding-left: 15px;
+
+    @include media-breakpoint-down(md) {
+        height: 1.84615384615rem; /* 48/26 */
+    }
+}
+#jsHeader {
+    position: relative;
+    z-index: 9999;
+}

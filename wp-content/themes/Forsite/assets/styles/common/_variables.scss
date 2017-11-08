@@ -1,0 +1,65 @@
+/**
+ * Variables
+ *
+ */
+
+/* icons path */
+$icon-font-path:            "../fonts/";
+
+/* theme colors */
+$brand-primary: #b83955;
+$brand-secondary: #2b2b3e;
+$brand-tertiary: #e93c5b;
+$brand-quaternary: #1c1d2e;
+$brand-gray: #e9eaec;
+$brand-copy: #444444;
+
+/* theme fonts */
+$brand-primary-font: 'Quicksand', sans-serif; 
+
+/* miscs */
+$topbar-height:  2.66666666667rem; /* 48/18 */
+$navbar-height:  3.07692307692rem; /* 80/26 *//* 55/18 */
+
+/* colors */
+$black:  #000 !default;
+$white:  #fff !default;
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$red:     #ff0000 !default;
+$cyan:    #17a2b8 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$gray-100: #f8f9fa !default;
+$gray-800: #343a40 !default;
+
+$body-bg:       $white;
+$body-color:    $brand-copy;
+
+/* theme colors */
+$theme-colors: (
+  primary: $brand-primary,
+  secondary: $brand-secondary,
+  tertiary: $brand-tertiary,
+  quaternary: $brand-quaternary,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800,
+  gray: $brand-gray,  
+  copy: $brand-copy,
+  white: $white,
+) !default;
+
+/* border radius */
+//$enable-rounded: false;
+$border-radius:          .375rem;
+$border-radius-lg:       .375rem;
+
+/* font family */
+$font-family-base: $brand-primary-font;
+$headings-font-family: $brand-primary-font;
+$headings-font-weight: 700;

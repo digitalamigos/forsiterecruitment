@@ -1,0 +1,75 @@
+/**
+ * Lists
+ *
+ */
+
+//
+// Lists
+//
+ul, ol {
+    list-style: none;
+
+    li {
+        position: relative;
+        list-style: none;
+
+        &:before {            
+            position: absolute;
+        }
+        
+        &[class]:before {
+            display: none;
+        }
+    }
+
+    // primary colored list
+    &.list-primary li:before {
+        color: $brand-primary;
+    }
+    // Secondary colored list
+    &.list-secondary li:before {
+        color: $brand-secondary;
+    }
+    // tertiary colored list
+    &.list-tertiary li:before {
+        color: $brand-tertiary;
+    }
+}
+
+/* unordered list */
+ul>li:before {
+    content: "\2022 ";
+    top: 0.625rem; /* 10/16 */
+    left: -1.25rem; /* 20/16 */
+    font-size: 1.5625rem; /* 25/16 */
+    line-height: 0.3125rem; /* 5/16 */
+    display: block;
+    width: 0.3125rem; /* 5/16 */
+    height: 0.3125rem; /* 5/16 */
+}
+
+/* ordered list */
+ol>li {
+    counter-increment: step-counter;
+
+    &:before {
+        content: counter(step-counter) ".";
+        left: -1.5rem; /* 24/16 */
+        width: 0.875rem; /* 14/16 */
+        text-align: right;
+    }
+}
+
+//
+// List with Separator
+//
+.list-with-sep {
+    li:after {
+        content: "|";
+        padding-left: 10px;
+        color: inherit;
+    }
+    li:last-child:after {
+        content: '';
+    }
+}

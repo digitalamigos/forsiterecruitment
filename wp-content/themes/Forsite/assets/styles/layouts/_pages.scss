@@ -1,0 +1,58 @@
+/**
+ * Pages
+ *
+ */
+
+//
+// Page Header
+//
+.page-header {
+    position: relative;
+    background: $brand-secondary;
+    text-align: center;
+    
+    @include media-breakpoint-down(md) {
+        padding-top: $navbar-height;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: $topbar-height + $navbar-height;
+    }
+}
+.page-title {    
+    font-weight: 500;
+    padding-top: 3.88888888889rem; /* 70/18 */
+    padding-bottom: 3.88888888889rem; /* 70/18 */
+    color: $white;
+    margin-bottom: 0;
+    display: inline-block;
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+        font-size: 1.7rem;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 2rem;
+    }
+
+    &:before {
+        content: "";
+        position: relative;
+        display: inline-block;
+        top: .25em;
+        width: 1.65em;
+        height: 1.5em;
+        margin-right: .25em;
+        background-image: url(../images/logo-i-light.png);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain;
+    }
+}
+
+//
+// Page Content
+//
+.page-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}

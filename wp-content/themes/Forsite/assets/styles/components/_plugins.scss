@@ -1,0 +1,211 @@
+/**
+ * Plugins
+ *
+ */
+
+//
+// Contact Form 7
+//
+.wpcf7 {
+    br {
+        display: none;
+    }
+}
+
+//
+// SLICK SLIDER
+//
+
+.slick-slide {
+    display: none;
+}
+.slick-initialized,
+.slick-slide:first-child { 
+    display: block; 
+}
+.slick-list,
+.slick-track,
+.slick-slide {
+
+    .hero-slider & {
+        height: 100%
+    }
+}
+.slick-prev, 
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 1.66666666667rem; /* 30/18 */
+    height: 3.22222222222rem; /* 58/18 */
+    margin-top: -1.61111111111rem; /* 29/18 */
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;        
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}
+.slick-disabled {
+    opacity: .25;
+    cursor: default;
+}
+.slick-prev {
+    left: -.25rem;
+
+    &:before {
+        background-image: url(../images/left-angle-i.png);
+    }
+
+    @include media-breakpoint-up(lg) {
+        left: -3rem;
+    }
+}
+.slick-next {
+    right: -.25rem;
+
+    &:before {
+        background-image: url(../images/right-angle-i.png);
+    }
+
+    @include media-breakpoint-up(lg) {
+        right: -3rem;
+    }
+}
+
+
+//
+// Job Adder
+//
+#ja-jobs-widget {
+    @extend .bg-gray;
+    padding-top: 3rem;
+}
+#ja-jobs-widget>br {
+    display: none;
+}
+.ja-job-search {
+    @extend .pt-3;
+    @extend .section; 
+    @extend .container;
+}
+.ja-form,
+.ja-job-list {
+    @extend .container;
+}
+//.ja-job-search,
+.ja-job-list-container {
+    @extend .section;
+    @extend .bg-white;
+}
+.ja-job-list-container .no-jobs-content{
+    @extend .container;
+}
+// .ja-job-search {
+//     @extend .bg-gray;
+// }
+.powered-by-jobadder {
+    display: none;
+}
+
+/* job list */
+.ja-job-list .job .title {
+    @extend .h4;
+
+    a {
+        color: inherit;
+    }
+}
+.ja-job-list .job .view-details {
+    @extend .btn;
+    @extend .btn-primary;
+}
+.ja-job-list .job .date-posted {
+    font-weight: bold;
+}
+.ja-job-list .job .classifications {
+    @extend .list-tertiary;
+    margin-bottom: 1.5rem;
+}
+
+/* job form */
+.ja-form .ja-submit {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+.ja-form .ja-field {
+    @extend .form-group;
+    position: relative;
+    display: block;
+    overflow: hidden;    
+
+    input,
+    select {
+        @extend .form-control;
+        padding: .875rem 1rem;
+        height: auto !important;
+    }
+
+    &:before {
+        content: "";
+        height: .277777777778rem;
+        width: 100%;
+        display: block;
+        background-color: #2b2b3e;
+        position: absolute;
+        bottom: 0;
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+    }
+}
+.ja-form .ja-submit .ja-button {
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .btn-block;
+    @extend .btn-lg-inline-block;
+}
+.ja-form {
+    @extend .row;
+}
+.ja-form .ja-field-container {
+    @extend .col-lg-6;
+}
+.ja-form .ja-field-container:nth-child(-n+3) {
+    @extend .col-lg-4;
+}
+
+/* job details */
+.ja-job-details {
+    @extend .container;
+    @extend .section;
+}
+.ja-job-details .apply {
+    @extend .d-flex;
+    @extend .justify-content-between;
+    @extend .align-items-center;
+}
+.ja-button {
+    @extend .btn;
+    @extend .btn-primary;
+}

@@ -1,0 +1,88 @@
+/**
+ * Sections
+ *
+ */
+
+.section {
+    padding-top: 2.77777777778rem; /* 50/18 */
+    padding-bottom: 2.77777777778rem; /* 50/18 */
+    overflow: hidden;
+}
+
+//
+// Featured Jobs
+//
+.featured-jobs {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.featured-job {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+//
+// Our Values 
+//
+.values-item {
+    position: relative;
+    min-height: 10rem;
+
+    &:hover .values-item__top {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.values-item__description,
+.values-item__top {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+}
+.values-item__top {
+    background: $white; 
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+.values-item__description {
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+//
+// Our Partners
+//
+.partners-item {
+    height: 6.66666666667rem; /* 120/18 */
+    padding: 1rem;
+    display: block;
+
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+}
+.partners-item__image {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: url('../images/grayscale.svg#greyscale'); 
+    filter: gray;
+    -webkit-filter: grayscale(1);
+
+    .partners-item:hover &,
+    .partners-item:focus & {
+        filter: none;
+    }
+}
