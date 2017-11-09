@@ -1,13 +1,21 @@
 <div class="hero">
     <?php $home_hero_slider = get_field('home_hero_slider'); ?>
 
-    <?php if($home_hero_slider): ?>
-    <div id="jsHeroSlider" class="hero-slider">
-        <?php foreach( $home_hero_slider as $image ): ?>
-            <?php $hero_slide = wp_get_attachment_image_src($image['ID'], array('1920', '1200')); ?>
-            <div class="hero-slider__img" style="background-image: url(<?php echo $hero_slide[0]; ?>);"></div>
-        <?php endforeach; ?>
-    </div>
+    <?php if(get_field('hero_option') === 'slider'): ?>
+        <?php if($home_hero_slider): ?>
+        <div id="jsHeroSlider" class="hero-slider">
+            <?php foreach( $home_hero_slider as $image ): ?>
+                <?php $hero_slide = wp_get_attachment_image_src($image['ID'], array('1920', '1200')); ?>
+                <div class="hero-slider__img" style="background-image: url(<?php echo $hero_slide[0]; ?>);"></div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+    <?php else: ?>
+        <?php if($video = get_field('hero_video')): ?>
+        <div class="hero-video">
+            <div class="video-embed"><?php the_field('hero_video'); ?></div>
+        </div>
+        <?php endif; ?>
     <?php endif; ?>
 
     <div class="hero-content d-flex flex-column align-items-center justify-content-center">
