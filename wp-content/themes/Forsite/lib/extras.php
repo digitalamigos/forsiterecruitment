@@ -160,3 +160,15 @@ if( function_exists('acf_add_options_page') ) {
   ));  
 
 }
+
+function Oembed_youtube_no_title($html,$url,$args){
+  if( !is_admin() ) {
+    $url_string = parse_url($url, PHP_URL_QUERY);
+    parse_str($url_string, $id);
+    if (isset($id['v'])) {
+        return '<iframe width="'.$args['width'].'" height="'.$args['height'].'" src="http://www.youtube.com/embed/'.$id['v'].'?autoplay=1&vq=hd1080&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>';
+    }
+    return $html;
+  }
+}
+add_filter('oembed_result', __NAMESPACE__ . '\\Oembed_youtube_no_title',10,3); 
