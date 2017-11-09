@@ -24,12 +24,12 @@
             <img class="hero-content__logo-mobile img-fluid mb-5 d-block d-lg-none" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-hero-mobile.png" alt="<?php bloginfo('name'); ?> - Passionate about people">
             <div class="row w-100 no-gutters text-center">
                 <div class="col-lg-6 mx-auto">
-                    <div class="row">
+                    <div class="row">                        
                         <div class="col-lg-6">
-                            <a href="<?php the_field('hero_search_for_a_job_link'); ?>" class="btn btn-primary btn-large btn-block mb-3 mb-lg-0">Search for a job</a>
+                            <a href="<?php echo get_the_permalink(get_field('hero_search_for_a_job_link')); ?>" class="btn btn-primary btn-large btn-block mb-3 mb-lg-0">Search for a job</a>
                         </div>
                         <div class="col-lg-6">
-                            <a href="<?php the_field('hero_get_in_touch_link'); ?>" class="btn btn-primary btn-large btn-block">Get in touch</a>
+                            <a href="<?php echo get_the_permalink(get_field('hero_get_in_touch_link')); ?>" class="btn btn-primary btn-large btn-block">Get in touch</a>
                         </div>
                     </div>
                 </div>
