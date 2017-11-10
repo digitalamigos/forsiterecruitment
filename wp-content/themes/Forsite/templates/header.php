@@ -32,8 +32,10 @@
             <div class="container">
                 <form class="search-box d-flex align-items-center" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
                     <label class="sr-only" for="s">Search for:</label>
-                    <input class="form-control" type="search" value="" name="s" id="s" autocomplete="off" placeholder="Search...">
-                    <button class="search-box__submit btn-link" type="submit" id="searchsubmit"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Search</span></button>
+                    <div class="relative w-100">
+                        <input class="form-control" type="search" value="" name="s" id="s" autocomplete="off" placeholder="Search...">
+                        <button class="search-box__submit btn-link" type="submit" id="searchsubmit"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">Search</span></button>
+                    </div>
                 </form>
             </div>
         </div>    
