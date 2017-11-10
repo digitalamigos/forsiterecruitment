@@ -14,10 +14,14 @@
                     <?php the_content(); ?>
                 </div>
                 <div class="col-lg-4">
-                    <?php echo do_shortcode('[contact-form-7 id="29" title="Contact form"]'); ?>
+                    <?php if(get_field('contact_form_shortcode')): ?>
+                        <?php echo do_shortcode(get_field('contact_form_shortcode')); ?>
+                    <?php endif; ?>
                     <div class="d-block d-lg-none text-center">
+                        <?php if(get_field('contact_number', 'option')): ?>
                         <p class="h3">OR</p>
-                        <a class="btn btn-primary btn-large btn-block" href="#">Call Us</a>
+                        <a class="btn btn-primary btn-large btn-block" href="tel:<?php the_field('contact_number', 'option'); ?>">Call Us</a>
+                        <?php endif; ?>
                     </div>
                 </div>                
             </div>
