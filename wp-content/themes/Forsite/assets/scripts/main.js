@@ -24,13 +24,15 @@
         (function () {
 
           jQuery(document).ready(function($) {
+            $('body').addClass('preloading');
             $('#jsPreloader').addClass('active');   
           });
           
 
           $(window).on('load', function(){
               setTimeout(function(){
-                 $('#jsPreloader').addClass('leaving');   
+                $('body').removeClass('preloading');
+                 $('#jsPreloader').addClass('leaving');
              }, 2000);
           }); 
 
@@ -78,9 +80,10 @@
               navportal_toggler.text('Employee Portal');
 
               if(obj.hasClass('navmenu-is-visible')) {                
-                obj.removeClass('navmenu-is-visible');
+                obj.removeClass('navmenu-is-visible');                
               } else {
                 obj.addClass('navmenu-is-visible');
+                obj.find('.navbar-search').removeClass('navsearch-is-visible');
               }              
             });
 
@@ -91,6 +94,7 @@
                 navportal_toggler.text('Employee Portal');
               } else {
                 obj.addClass('navportal-is-visible');
+                obj.find('.navbar-search').removeClass('navsearch-is-visible'); 
                 navportal_toggler.text('Close Portal');
               }              
             });
@@ -102,10 +106,14 @@
         (function () {          
           $('.search-toggler').on('click', function(event) {
             var navbar_search = $('.navbar-search');            
+            var obj = $('body');
+
             if(navbar_search.hasClass('navsearch-is-visible')) {
-              navbar_search.removeClass('navsearch-is-visible');
+              navbar_search.removeClass('navsearch-is-visible');              
             } else {
               navbar_search.addClass('navsearch-is-visible');
+              obj.removeClass('navmenu-is-visible');
+              obj.removeClass('navportal-is-visible');
             }
           });
         })(); 

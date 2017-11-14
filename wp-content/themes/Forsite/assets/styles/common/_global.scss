@@ -26,9 +26,9 @@ body {
     font-size: 1rem;
     overflow: auto;
 
-    // &.navmenu-is-visible {
-    //     overflow: hidden;
-    // }
+    &.preloading {
+        overflow: hidden;
+    }
 }
 
 html,

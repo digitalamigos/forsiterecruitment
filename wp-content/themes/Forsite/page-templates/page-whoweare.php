@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="brand-card__body col-md-7">
                                             <div class="brand-card__content">
-                                                <?php if(get_sub_field('team_member_name')): ?>                                                    
+                                                <?php if(get_sub_field('team_member_name')): ?>
                                                     <h3 class="brand-card__title h4"><?php the_sub_field('team_member_name'); ?></h3>
                                                 <?php endif; ?>
                                                 <?php if(get_sub_field('team_member_position')): ?>

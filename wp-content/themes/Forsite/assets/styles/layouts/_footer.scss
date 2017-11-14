@@ -51,6 +51,11 @@
     a {
         color: $white;
         font-size: 2rem;
+
+        &:hover,
+        &:focus {
+            color: $brand-primary;
+        }
     }
 }
 
