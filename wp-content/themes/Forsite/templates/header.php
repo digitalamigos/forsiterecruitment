@@ -52,7 +52,7 @@
             <ul class="navbar-nav text-center mb-lg-0">
                 <li class="nav-item">
                     <p class="nav-label d-none d-lg-block">For Consultancy Services</p>
-                    <p><a href="<?php the_field('visit_our_partners_link', 'option'); ?>" class="nav-link">Visit Forsite Partners</a>  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/forsite-partners-logo.png" alt="Forsite Partners"></p>
+                    <p><img src="<?php echo get_template_directory_uri(); ?>/assets/images/forsite-partners-logo.png" alt="Forsite Partners"> <a href="<?php the_field('visit_our_partners_link', 'option'); ?>" class="nav-link">Visit Forsite Partners</a></p>
                 </li>
             </ul>
             <div class="d-block d-lg-none mb-3">

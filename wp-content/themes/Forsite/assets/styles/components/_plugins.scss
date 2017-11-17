@@ -13,6 +13,14 @@
 }
 
 //
+// PARALLAX
+//
+.parallax-window,
+.parallax-slider {
+    height: 100%;
+}
+
+//
 // SLICK SLIDER
 //
 
@@ -167,6 +175,10 @@
         padding: 0.777777777778rem 1rem;
         height: auto !important;
         line-height: 1.4;
+
+        &:focus {
+            border-color: #b83955;
+        }
     }
 }
 #ja-jobs-widget .ja-form .ja-submit .ja-button {

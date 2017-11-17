@@ -24,20 +24,25 @@
         (function () {
 
           jQuery(document).ready(function($) {
-            $('body').addClass('preloading');
+            $('body.page-template-page-homepage').addClass('preloading');
             $('#jsPreloader').addClass('active');   
           });
           
 
           $(window).on('load', function(){
               setTimeout(function(){
-                $('body').removeClass('preloading');
-                 $('#jsPreloader').addClass('leaving');
+                $('body.page-template-page-homepage').removeClass('preloading');
+                $('#jsPreloader').addClass('leaving');
              }, 2000);
           }); 
 
         })();
 
+
+        // PARALLAX WINDOW
+        (function () {
+          $('.parallax-window').parallax();
+        })(); 
 
         // HEADROOM
         (function() {

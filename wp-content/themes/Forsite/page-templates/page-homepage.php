@@ -20,7 +20,7 @@
                     <div class="mb-3">
                         <?php the_sub_field('featured_job_description'); ?>
                     </div>
-                    <a class="btn btn-outline-primary btn-block btn-lg-inline-block" href="<?php the_sub_field('featured_job_link'); ?>">View job</a>
+                    <a class="btn btn-primary btn-block btn-lg-inline-block" href="<?php the_sub_field('featured_job_link'); ?>">View job</a>
                 </div>
                 <?php endwhile; ?>
             </div>
@@ -59,7 +59,7 @@
                                     </div>
                                 <?php endif; ?>
                                 <?php if(get_sub_field('learn_more_link')): ?>                                
-                                    <a href="<?php the_sub_field('learn_more_link'); ?>" class="btn btn-outline-primary btn-block btn-lg-inline-block">Learn More</a>
+                                    <a href="<?php the_sub_field('learn_more_link'); ?>" class="btn btn-primary btn-block btn-lg-inline-block">Learn More</a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                     </div>
                                 <?php endif; ?>
                                 <?php if(get_sub_field('learn_more_link')): ?>                                
-                                    <a href="<?php the_sub_field('learn_more_link'); ?>" class="btn btn-outline-primary btn-block btn-lg-inline-block">Learn More</a>
+                                    <a href="<?php the_sub_field('learn_more_link'); ?>" class="btn btn-primary btn-block btn-lg-inline-block">Learn More</a>
                                 <?php endif; ?>
                             </div>
                         </div>

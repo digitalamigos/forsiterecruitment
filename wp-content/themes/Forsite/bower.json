@@ -16,7 +16,8 @@
     "scrollreveal": "^3.3.6",
     "animate.css": "^3.5.2",
     "slick-carousel": "^1.8.1",
-    "lazysizes": "^3.0.0"
+    "lazysizes": "^3.0.0",
+    "parallax.js": "^1.5.0"
   },
   "overrides": {
     "font-awesome": {
