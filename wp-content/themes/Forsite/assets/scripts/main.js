@@ -208,7 +208,7 @@
 
 
         // SLICK SLIDER
-        (function () {
+        (function () {          
           $('#jsHeroSlider').slick({
             dots: false,
             arrows: false,
@@ -236,37 +236,45 @@
               }
             ]
           });
-
-          $('#jsOurPartners').slick({
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 300,
-            autoplay: true,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            responsive: [
-              {
-                breakpoint: 992,
-                settings: {
-                  slidesToShow: 4,
-                }
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 3,
-                }
-              },
-              {
-                breakpoint: 576,
-                settings: {
-                  slidesToShow: 2,
-                }
-              }
-            ]
-          });
         })();     
+
+        $(window).on('load', function(event) {
+            var container = $('#jsOurPartners');
+
+            if(container.children().length >= 5) {
+                container.slick({
+                  dots: false,
+                  arrows: false,
+                  infinite: true,
+                  speed: 300,
+                  autoplay: true,
+                  slidesToShow: 5,
+                  slidesToScroll: 1,
+                  variableWidth: true,
+
+                  responsive: [
+                    {
+                      breakpoint: 992,
+                      settings: {
+                        slidesToShow: 4,
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 3,
+                      }
+                    },
+                    {
+                      breakpoint: 576,
+                      settings: {
+                        slidesToShow: 2,
+                      }
+                    }
+                  ]
+                });
+            }            
+          });
 
 
         // SCROLL REVEAL

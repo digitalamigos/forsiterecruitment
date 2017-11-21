@@ -151,7 +151,7 @@
     </div>
 </section>
 
-<section class="section bg-gray sr-fadeinup">
+<section class="section bg-gray">
     <div class="container">
         <?php if(get_field('our_partners_section_title')): ?>        
         <h2 class="section-title text-center"><?php the_field('our_partners_section_title'); ?></h2>
@@ -164,7 +164,7 @@
                 <?php foreach( $our_partners as $image ): ?>
                 <div>
                     <a class="partners-item" href="<?php echo get_field('link_url', $image['ID']); ?>">
-                        <img class="partners-item__image img-fluid" src="<?php echo $image['url']; ?>" alt="Partner">
+                        <img class="partners-item__image img-fluid" src="<?php echo $image['url']; ?>" width="150" alt="Partner">
                     </a>
                 </div>
                 <?php endforeach; ?>
