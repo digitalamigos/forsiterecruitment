@@ -10,14 +10,18 @@
         </div>
         <div class="col-lg-8 order-lg-1 d-flex justify-content-center justify-content-lg-start flex-column flex-lg-row  mb-3">
             <ul class="footer-nav nav text-center d-none d-lg-flex">
+                <?php if(get_field('visit_our_partners_link', 'option')): ?>
                 <li class="nav-item">
                     <a class="nav-link forsite-partner-logo" href="<?php the_field('visit_our_partners_link', 'option'); ?>">
                         <img class="d-none d-lg-block" src="<?php echo get_template_directory_uri(); ?>/assets/images/forsite-logo-footer.png" alt="Forsite Partner Website">
                     </a>
                 </li>
+                <?php endif; ?>
+                <?php if(get_field('contact_number', 'option')): ?>
                 <li class="nav-item">
                     <a class="nav-link icon icon_left icon_phone" href="tel:<?php the_field('contact_number', 'option'); ?>"><i class="fa fa-phone" aria-hidden="true"></i> <?php the_field('contact_number', 'option'); ?></a>        
                 </li>
+                <?php endif; ?>
             </ul>
 
             <?php
@@ -25,12 +29,14 @@
                 wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'footer-nav nav flex-column flex-lg-row text-center']);
             endif;
             ?>
-            
+
+            <?php if(get_field('visit_our_partners_link', 'option')): ?>
             <ul class="footer-nav nav text-center d-block d-lg-none">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Visit Forsite Partners</a>
+                    <a class="nav-link" href="<?php the_field('visit_our_partners_link', 'option'); ?>">Visit Forsite Partners</a>
                 </li>
             </ul>
+            <?php endif; ?>
 
         </div>
     </div>
