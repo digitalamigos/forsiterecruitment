@@ -16,11 +16,13 @@
                 <?php while ( have_rows('featured_jobs') ) : the_row(); ?>
                 <div class="featured-job text-center">
                     <h3 class="h4 font-weight-normal mb-3"><?php the_sub_field('featured_job_title'); ?></h3>
-                    <h4 class="font-weight-normal mb-3"><?php the_sub_field('featured_job_company'); ?></h4>
+                    <h4 class="featured-job__company h6 font-weight-normal mb-3"><?php the_sub_field('featured_job_company'); ?></h4>
                     <div class="mb-3">
                         <?php the_sub_field('featured_job_description'); ?>
                     </div>
-                    <a class="btn btn-primary btn-block btn-lg-inline-block" href="<?php the_sub_field('featured_job_link'); ?>">View job</a>
+                    <div class="featured-job__cta">
+                        <a class="btn btn-primary btn-block btn-lg-inline-block" href="<?php the_sub_field('featured_job_link'); ?>">View job</a>
+                    </div>
                 </div>
                 <?php endwhile; ?>
             </div>
@@ -101,7 +103,7 @@
 
 <section class="section bg-gray sr-fadeinup">
     <div class="container">
-        <h2 class="section-title text-center sr-only">Who we are</h2>
+        <h2 class="section-title text-center">Who we are</h2>
         <div class="section-content">
             <div class="text-center">
                 <div class="lead">

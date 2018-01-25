@@ -39,6 +39,20 @@
         height: 100%
     }
 }
+.slick-track{
+    display: flex;
+
+    .slick-slide{
+        display: flex;
+        height: auto;
+        align-items: center; //optional
+        justify-content: center; //optional
+
+        &>div {
+            height: 100%; 
+        }
+    }
+}
 .slick-prev, 
 .slick-next {
     font-size: 0;
@@ -120,6 +134,9 @@
 #ja-jobs-widget .ja-job-list {
     @extend .container;
 }
+#ja-jobs-widget .ja-job-list .job {
+    margin-bottom: 3rem;
+}
 //.ja-job-search,
 #ja-jobs-widget .ja-job-list-container {
     @extend .section;
@@ -131,6 +148,8 @@
 // .ja-job-search {
 //     @extend .bg-gray;
 // }
+#powered-by-jobAdder,
+#ja-jobs-widget .ja-job-list .job .date-posted,
 #ja-jobs-widget .powered-by-jobadder {
     display: none;
 }
